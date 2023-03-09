@@ -4,7 +4,8 @@ import matplotlib.pyplot as plt
 from PIL import Image
 
 # Open the file and read the ping times into a list
-with open('test.txt') as f:
+file = str(input("File: "))
+with open(file) as f:
     ping_times = []
     for line in f:
         if 'time=' in line:
