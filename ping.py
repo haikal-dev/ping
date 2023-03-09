@@ -27,6 +27,7 @@ plt.plot(ping_times)
 plt.xlabel("Ping Number")
 plt.ylabel("Ping Time (ms)")
 plt.title(f"Ping Times to {host}")
+plt.grid(True)
 
 # Save the plot to a file
 plt.savefig("graph.png")
