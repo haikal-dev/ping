@@ -9,7 +9,7 @@ from PIL import Image
 host = str(input("IP address or domain: "))
 
 # Define the number of pings to send
-count = 100
+count = 10
 
 # Execute the ping command and capture its output
 print(f"Pinging to {host}...")
