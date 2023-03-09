@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
+import sys
 import matplotlib.pyplot as plt
 from PIL import Image
 
 # Open the file and read the ping times into a list
-file = str(input("File: "))
+file = str(sys.argv[1])
 with open(file) as f:
     ping_times = []
     for line in f:
@@ -15,11 +16,12 @@ with open(file) as f:
 
 # Create a graph
 plt.plot(ping_times)
+total = str(len(ping_times))
 
 # Add labels and titles
-plt.xlabel('Ping Number')
-plt.ylabel('Ping Time (ms)')
-plt.title('Ping Times')
+plt.xlabel('Ping Count')
+plt.ylabel('Response Time (ms)')
+plt.title(f'Ping by {total} times')
 
 # Show the graph
 plt.savefig("graph.png")
